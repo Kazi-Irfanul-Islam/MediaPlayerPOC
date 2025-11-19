@@ -7,6 +7,7 @@ namespace MediaPlayerPOC.Common.Specifications.Interfaces
 {
     public interface IMediaPlayer
     {
+        void Play(IMedia media);
         IList<IMedia> GetMedias();
 
 

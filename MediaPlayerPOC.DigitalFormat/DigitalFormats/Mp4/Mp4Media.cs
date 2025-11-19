@@ -15,5 +15,13 @@ namespace MediaPlayerPOC.DigitalFormat.DigitalFormats.Mp4
 
         public byte[] MediaData { get; set; }
 
+        public Mp4Media() {
+            Name = "Dummy Mp4";
+            Size = "20 MB";
+            Extension = ".mp4";
+            CreatedDate = DateTime.Now;
+            Director = "Dummy Director";
+            MediaData = new byte[200]; // Dummy data
+        }
     }
 }

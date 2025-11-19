@@ -14,4 +14,11 @@ namespace MediaPlayerPOC.Common.Specifications.Interfaces
 
 
     }
+
+    public enum MediaType
+    {
+        Mp3,
+        Mp4,
+        JPG,
+    }
 }

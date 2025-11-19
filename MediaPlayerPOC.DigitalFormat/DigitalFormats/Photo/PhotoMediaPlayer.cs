@@ -6,14 +6,20 @@ namespace MediaPlayerPOC.DigitalFormat.DigitalFormats.Photo
 {
     public class PhotoMediaPlayer : IMediaPlayer, IStaticMediaPlayer
     {
+        public void Play(IMedia media)
+        {
+            Console.WriteLine($"Viewing Photo: {media.Name}");
+        }
+
         public IMedia Display(IMedia mediaObj)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Displaying Photo: {mediaObj.Name}");
+            return mediaObj;
         }
 
         public IList<IMedia> GetMedias()
         {
-            throw new NotImplementedException();
+            return new List<IMedia>();
         }
     }
 }
