@@ -18,12 +18,17 @@ namespace MediaPlayerPOC.DigitalFormat.DigitalFormats.MP3
             throw new NotImplementedException();
         }
 
-        public IMedia Play(IMedia m)
+        public void Play(IMedia media)
+        {
+            Console.WriteLine($"Playing Mp3: {media.Name} by {(media as Mp3Media)?.Author}");
+        }
+
+        public void Stop()
         {
             throw new NotImplementedException();
         }
 
-        public void Stop()
+        IMedia ILocalStreamableMediaPlayer.Play(IMedia mediaObj)
         {
             throw new NotImplementedException();
         }

@@ -6,9 +6,9 @@ namespace MediaPlayerPOC.DigitalFormat.DigitalFormats.Mp4
 {
     public class Mp4MediaPlayer : IMediaPlayer, IPlayableMediaActions, ILocalStreamableMediaPlayer
     {
-        public IMedia Play(IMedia m)
+        public void Play(IMedia media)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Playing Mp4: {media.Name} directed by {(media as Mp4Media)?.Director}");
         }
         public void Pause()
         {
@@ -20,6 +20,11 @@ namespace MediaPlayerPOC.DigitalFormat.DigitalFormats.Mp4
         }
 
         public IList<IMedia> GetMedias()
+        {
+            throw new NotImplementedException();
+        }
+
+        IMedia ILocalStreamableMediaPlayer.Play(IMedia mediaObj)
         {
             throw new NotImplementedException();
         }

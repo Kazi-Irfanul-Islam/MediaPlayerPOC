@@ -10,5 +10,13 @@ namespace MediaPlayerPOC.DigitalFormat.DigitalFormats.Photo
         public string Extension { get; set; }
         public DateTime CreatedDate { get; set; }
         public byte[] MediaData { get; set; }
+
+        public PhotoMedia() {
+            Name = "Dummy Photo";
+            Size = "2 MB";
+            Extension = ".jpg";
+            CreatedDate = DateTime.Now;
+            MediaData = new byte[50]; // Dummy data
+        }
     }
 }

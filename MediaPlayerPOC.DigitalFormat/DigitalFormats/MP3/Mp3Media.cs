@@ -15,12 +15,14 @@ namespace MediaPlayerPOC.DigitalFormat.DigitalFormats.MP3
         public string Author { get; set; }
 
         public byte[] MediaData { get; set; }
-    }
 
-    public enum MediaType
-    {
-        Mp3,
-        Mp4,
-        JPG,
+        public Mp3Media() {
+            Name = "Dummy Mp3";
+            Size = "5 MB";
+            Extension = ".mp3";
+            CreatedDate = DateTime.Now;
+            Author = "Dummy Artist";
+            MediaData = new byte[100]; // Dummy data
+        }
     }
 }
